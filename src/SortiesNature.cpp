@@ -1,9 +1,9 @@
-#include "Sorties.h"
+#include "SortiesNature.h"
 #include <Arduino.h>
 
-Sorties::Sorties(){};
+SortiesNature::SortiesNature(){};
 
-Sorties::Sorties(int pin1, int pin2,  int pin3, int pin4,  int pin5,  int pin6,  int pin7,  int pin8  ){
+SortiesNature::SortiesNature(int pin1, int pin2,  int pin3, int pin4,  int pin5,  int pin6,  int pin7,  int pin8  ){
 
 this->outPin1 = pin1;
 this->outPin2 = pin2;
@@ -16,19 +16,19 @@ this->outPin8 = pin8;
 
 };
 
-int Sorties::active(){
+int SortiesNature::active(){
 digitalWrite(this->outPin1, HIGH);
 digitalWrite(this->outPin2, HIGH);
 digitalWrite(this->outPin3, HIGH);
-digitalWrite(this->outPin4, HIGH);
-digitalWrite(this->outPin5, HIGH);
-digitalWrite(this->outPin6, HIGH);
-digitalWrite(this->outPin7, HIGH);
-digitalWrite(this->outPin8, HIGH);
+digitalWrite(this->outPin4, LOW);
+digitalWrite(this->outPin5, LOW);
+digitalWrite(this->outPin6, LOW);
+digitalWrite(this->outPin7, LOW);
+digitalWrite(this->outPin8, LOW);
    
 };
 
-int Sorties::mode() {
+int SortiesNature::mode() {
     pinMode(this->outPin1 ,OUTPUT);
     pinMode(this->outPin2 ,OUTPUT);
     pinMode(this->outPin3 ,OUTPUT);
@@ -40,6 +40,3 @@ int Sorties::mode() {
 
     
 };
-   
-
-
